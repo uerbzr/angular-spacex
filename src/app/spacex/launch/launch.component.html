@@ -2,12 +2,20 @@
   <table class="table table-striped table-dark">
     <thead>
       <tr>
+        <td></td>
         <td>Name</td>
         <td>Details</td>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let launch of launches$ | async">
+        <td>
+          <img
+            src="{{ launch.links.mission_patch }}"
+            title="Mission Patch"
+            width="70"
+          />
+        </td>
         <td>{{ launch.mission_name }}</td>
         <td>{{ launch.details }}</td>
       </tr>
